@@ -1,152 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Upgrade Now</title>
+
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: #fff;
-}
-header {
-    background: #020617;
-    padding: 15px;
-    text-align: center;
-}
-nav a {
-    color: #38bdf8;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-.card {
-    background: #020617;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-button {
-    background: #38bdf8;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-button:hover {
-    background: #0ea5e9;
-}
-footer {
-    background: #020617;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
 /* LOGIN */
 #login {
-    position: fixed;
-    inset: 0;
-    background: #020617;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
+
 .login-box {
-    background: #0f172a;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  width: 280px;
 }
+
 input {
-    padding: 10px;
-    width: 100%;
-    margin: 10px 0;
-    border-radius: 6px;
-    border: none;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+/* HEADER COM IMAGEM */
+header {
+  background: linear-gradient(rgba(2,6,23,.7), rgba(2,6,23,.7)),
+  url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  color: #38bdf8;
+}
+
+/* MENU */
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: #38bdf8;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CONTEÚDO */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOGIN -->
 <div id="login">
-    <div class="login-box">
-        <h2>🔒 Área Restrita</h2>
-        <p>Digite a senha para acessar</p>
-        <input type="password" id="senha" placeholder="Senha">
-        <button onclick="verificar()">Entrar</button>
-        <p id="erro" style="color:red;"></p>
-    </div>
+  <div class="login-box">
+    <h2>🔒 Área Restrita</h2>
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="verificar()">Entrar</button>
+    <p id="erro" style="color:red;"></p>
+  </div>
 </div>
 
-<header>
-    <h1>Upgrade Now</h1>
-    <nav>
-        <a href="#inicio">Início</a>
-        <a href="#nivel">Nível de Treino</a>
-        <a href="#buff">Buff Treino</a>
-        <a href="#contato">Contato</a>
-    </nav>
+<header id="inicio">
+  <h1>Upgrade Now</h1>
+  <p>Evolua corpo e mente para o próximo nível</p>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="treinos.html">Nível de Treino</a>
+    <a href="buff.html">Buff de Treino</a>
+  </nav>
 </header>
 
-<section id="inicio">
-    <div class="card">
-        <h2>💪 Evolua Seu Corpo</h2>
-        <p>Treinos e dietas para Iniciantes, Intermediários e Avançados. Tudo organizado para sua evolução constante.</p>
-    </div>
-</section>
-
-<section id="nivel">
-    <div class="card">
-        <h2>🏋️ Níveis de Treino</h2>
-        <ul>
-            <li><strong>Iniciante:</strong> Base muscular, adaptação e consistência</li>
-            <li><strong>Intermediário:</strong> Hipertrofia, intensidade e divisão</li>
-            <li><strong>Avançado:</strong> Alta performance, volume e estratégia</li>
-        </ul>
-    </div>
-</section>
-
-<section id="buff">
-    <div class="card">
-        <h2>⚡ Buff Treino</h2>
-        <p>Dicas extras, suplementos, técnicas avançadas, descanso, mentalidade e foco total em resultados.</p>
-    </div>
-</section>
-
-<section id="contato">
-    <div class="card">
-        <h2>📲 Contato</h2>
-        <p>Entre em contato para parcerias, consultorias ou dúvidas.</p>
-        <p><strong>WhatsApp:</strong> (seu número)</p>
-        <p><strong>Instagram:</strong> @seuperfil</p>
-    </div>
+<section>
+  <h2>💪 Bem-vindo</h2>
+  <p>
+    Plataforma exclusiva com treinos, dietas e estratégias para evolução física
+    real e consistente.
+  </p>
 </section>
 
 <footer>
-    © 2026 - Upgrade Now
+  © 2026 - Upgrade Now
 </footer>
 
 <script>
 function verificar() {
-    const senhaCorreta = "meupiru321";
-    const senha = document.getElementById("senha").value;
+  const senhaCorreta = "SUA_SENHA_AQUI";
+  const senha = document.getElementById("senha").value;
 
-    if (senha === senhaCorreta) {
-        document.getElementById("login").style.display = "none";
-    } else {
-        document.getElementById("erro").innerText = "Senha incorreta!";
-    }
+  if (senha === senhaCorreta) {
+    document.getElementById("login").style.display = "none";
+  } else {
+    document.getElementById("erro").innerText = "Senha incorreta";
+  }
 }
 </script>
 
